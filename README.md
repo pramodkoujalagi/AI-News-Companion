@@ -15,10 +15,11 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 
 <p align="center">
   <img src="https://img.shields.io/badge/OpenAI-%23FFFFFF.svg?style=for-the-badge&logo=OpenAI&logoColor=black" alt="OpenAI">
+  <img src="https://img.shields.io/badge/Serper-%233776AB.svg?style=for-the-badge&logo=Serper&logoColor=white" alt="Serper">
   <img src="https://img.shields.io/badge/Streamlit-%23FF0000.svg?style=for-the-badge&logo=Streamlit&logoColor=red&color=white" alt="Streamlit">
   <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=Python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Serper-%232496ED.svg?style=for-the-badge&logo=Serper&logoColor=blue&color=white" alt="Serper">
   <img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=Docker&logoColor=blue&color=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Langchain-%23FF000.svg?style=for-the-badge&logo=Langchain&logoColor=white" alt="Langchain">
 </p>
 
 ## 🌟 Features

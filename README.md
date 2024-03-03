@@ -51,20 +51,15 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
    git clone https://github.com/pramodkoujalagi/AI-News-Agent.git
    ```
 
-2. **Install Dependencies**: Install the required dependencies to ensure smooth operation:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set Up Environment Variables**: Create a `.env` file and add your OpenAI and SerpAPI API keys:
+2. **Set Up Environment Variables**: Create a `.env` file and add your OpenAI and SerpAPI API keys:
 
     ```bash
     OPENAI_API_KEY=your_openai_api_key
     SERPAPI_API_KEY='your_serpapi_api_key'
     ```
 
-4. **Run the Application**: Launch the Epic Newzz! application to start exploring the latest news:
+3. **Run the Application**: Launch the Epic Newzz! application to start exploring the latest news:
 
    ```bash
    streamlit run app.py

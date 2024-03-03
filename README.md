@@ -45,7 +45,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 1. **Clone the Repository**: Get started by cloning the Epic Newzz! repository to your local machine:
 
    ```bash
-   git clone https://github.com/your_username/epic-newzz.git
+   git clone https://github.com/pramodkoujalagi/AI-News-Agent.git
    ```
 
 2. **Install Dependencies**: Install the required dependencies to ensure smooth operation:
@@ -64,7 +64,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 4. **Run the Application**: Launch the Epic Newzz! application to start exploring the latest news:
 
    ```bash
-   streamlit run epic_newzz.py
+   streamlit run app.py
    ```
 
 ## 📝 Functionality of the Code

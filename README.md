@@ -42,7 +42,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
   <img src="ss/Screenshot (82).png" width="1000">
 </p>
 
-
+<!--
 ## 🚀 Getting Started
 
 1. **Clone the Repository**: Get started by cloning the Epic Newzz! repository to your local machine:
@@ -64,7 +64,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
    ```bash
    streamlit run app.py
    ```
-
+-->
 ## 📝 Functionality of the Code
 
 The code behind Epic Newzz! leverages the power of Large Language Models (LLMs) and intelligent algorithms to gather, curate, and summarize news articles from across the web. Newzy, the AI news companion, interacts with users through the Streamlit interface, enabling seamless navigation and personalized news experiences. From dynamic news gathering to intelligent summarization, Epic Newzz! delivers an unparalleled news consumption experience like never before.

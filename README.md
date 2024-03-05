@@ -80,3 +80,6 @@ Epic Newzz! is developed and maintained by [Pramod Koujalagi](https://github.com
 Connect with us to share feedback, suggestions, and ideas for future enhancements.
 
 Ready to elevate your news experience? Dive into Epic Newzz! and discover a world of curated content at your fingertips! 🌍✨
+
+## ⚖️ License
+[MIT License](LICENSE)

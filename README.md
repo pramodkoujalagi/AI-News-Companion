@@ -75,7 +75,7 @@ Epic Newzz! welcomes contributions from the community. Feel free to fork the rep
 
 ## 👨‍💻 About the Developer
 
-Epic Newzz! is developed and maintained by [Pramod Koujalagi](https://github.com/pramodkoujalagi)
+Newzy is developed and maintained by [Pramod Koujalagi](https://github.com/pramodkoujalagi)
 
 Connect with us to share feedback, suggestions, and ideas for future enhancements.
 

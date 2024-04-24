@@ -34,12 +34,15 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 ## 📸 Image Gallery
 
 <p align="center">
-  <img src="ss/Screenshot (84).png" width="1000">
-  <img src="ss/Screenshot (85).png" width="1000">
-  <img src="ss/Screenshot (86).png" width="1000">
-  <img src="ss/Screenshot (88).png" width="1000">
-  <img src="ss/Screenshot (81).png" width="1000">
-  <img src="ss/Screenshot (82).png" width="1000">
+  <img src="ss/SS11.png" width="1000">
+  <img src="ss/SS12.png" width="1000">
+  <img src="ss/SS13.png" width="1000">
+  <img src="ss/SS14.png" width="1000">
+  <img src="ss/SS2.png" width="1000">
+  <img src="ss/SS1.png" width="1000">
+  <img src="ss/SS3.png" width="1000">
+  <img src="ss/SS4.png" width="1000">
+  <img src="ss/SS5.png" width="1000">
 </p>
 
 <!--

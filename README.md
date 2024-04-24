@@ -1,4 +1,4 @@
-<h1 align="center">Epic Newzz! by Pramod 🚀📰</h1>
+<h1 align="center">Epic Newzz by Pramod 🚀📰</h1>
 
 <p align="center">
   Your Ultimate News Companion - Stay informed, Stay Ahead!
@@ -74,15 +74,15 @@ The code behind Epic Newzz! leverages the power of Large Language Models (LLMs) 
 
 ## 🤝 Contributing
 
-Epic Newzz! welcomes contributions from the community. Feel free to fork the repository, make improvements, and submit pull requests to enhance the news experience for all users.
+Epic Newzz welcomes contributions from the community. Feel free to fork the repository, make improvements, and submit pull requests to enhance the news experience for all users.
 
 ## 👨‍💻 About the Developer
 
-Newzy is developed and maintained by [Pramod Koujalagi](https://github.com/pramodkoujalagi)
+Newzy - AI News Companion is developed and maintained by [Pramod Koujalagi](https://github.com/pramodkoujalagi)
 
-Connect with us to share feedback, suggestions, and ideas for future enhancements.
+Connect with me to share feedback, suggestions, and ideas for future enhancements.
 
-Ready to elevate your news experience? Dive into Epic Newzz! and discover a world of curated content at your fingertips! 🌍✨
+Ready to elevate your news experience? Dive into Epic Newzz and discover a world of curated content at your fingertips! 🌍✨
 
 ## ⚖️ License
 [MIT License](LICENSE)

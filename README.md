@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Epic Newzz! is not just another news aggregator. It's your personalized news concierge, delivering curated updates tailored to your interests and preferences. Powered by cutting-edge AI technologies, Epic Newzz! transforms the way you consume news, making it more engaging, informative, and effortless.
+Epic Newzz is not just another news aggregator. It's your personalized news concierge, delivering curated updates tailored to your interests and preferences. Powered by cutting-edge AI technologies, Epic Newzz transforms the way you consume news, making it more engaging, informative, and effortless.
 
 ## 🤖 Meet Newzy - Your AI News Companion
 

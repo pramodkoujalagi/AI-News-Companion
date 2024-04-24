@@ -10,7 +10,7 @@ Epic Newzz! is not just another news aggregator. It's your personalized news con
 
 ## 🤖 Meet Newzy - Your AI News Companion
 
-Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-of-the-art Large Language Models (LLMs) and intelligent algorithms, Newzy scours the web, curates the most relevant news articles, and provides insightful summaries tailored just for you. With Newzy by your side, stay ahead of the curve and never miss a beat in the fast-paced world of news.
+Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-of-the-art Large Language Model (GPT-3.5 Turbo) and intelligent algorithms, Newzy scours the web, curates the most relevant news articles, and provides insightful summaries tailored just for you. With Newzy by your side, stay ahead of the curve and never miss a beat in the fast-paced world of news.
 
 
 <p align="center">

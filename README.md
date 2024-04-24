@@ -1,7 +1,7 @@
 <h1 align="center">Epic Newzz by Pramod 🚀📰</h1>
 
 <p align="center">
-  Your Ultimate News Companion - Stay informed, Stay Ahead!
+  Stay informed, Stay Ahead!
 </p>
 
 ## Introduction

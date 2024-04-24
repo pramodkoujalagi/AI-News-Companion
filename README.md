@@ -70,7 +70,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 -->
 ## 📝 Functionality of the Code
 
-The code behind Epic Newzz! leverages the power of Large Language Models (LLMs) and intelligent algorithms to gather, curate, and summarize news articles from across the web. Newzy, the AI news companion, interacts with users through the Streamlit interface, enabling seamless navigation and personalized news experiences. From dynamic news gathering to intelligent summarization, Epic Newzz! delivers an unparalleled news consumption experience like never before.
+The code behind Epic Newzz leverages the power of Large Language Models (GPT-3.5 Turbo) and intelligent algorithms to gather, curate, and summarize news articles from across the web. Newzy, the AI news companion, interacts with users through the Streamlit interface, enabling seamless navigation and personalized news experiences. From dynamic news gathering to intelligent summarization, Epic Newzz delivers an unparalleled news consumption experience like never before.
 
 ## 🤝 Contributing
 

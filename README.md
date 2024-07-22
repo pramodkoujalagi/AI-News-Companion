@@ -4,7 +4,7 @@
 Newzy says - Stay informed, Stay Ahead!
 </p>
 
-## Introductio
+## Introduction
 
 Epic Newzz is not just another news aggregator. It's your personalized news concierge, delivering curated updates tailored to your interests and preferences. Powered by cutting-edge AI technologies, Epic Newzz transforms the way you consume news, making it more engaging, informative, and effortless.
 
@@ -32,6 +32,7 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 
 
 ## 📸 Image Gallery
+(These images are from the latest version of the Newzy, haven't pushed the code yet.)
 
 <p align="center">
   <img src="ss/SS11.png" width="1000">

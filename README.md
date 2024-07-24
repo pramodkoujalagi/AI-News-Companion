@@ -1,4 +1,4 @@
-<h1 align="center">Epic Newzz by Pramod 🚀📰</h1>
+<h1 align="center">Epic Newzz b Pramod 🚀📰</h1>
 
 <p align="center">
 Newzy says - Stay informed, Stay Ahead!

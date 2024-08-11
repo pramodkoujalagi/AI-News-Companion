@@ -12,6 +12,7 @@ import requests
 import json
 import streamlit as st
 from langchain.schema import SystemMessage
+from bs4 import BeautifulSoup
 
 load_dotenv()
 
@@ -44,12 +45,12 @@ def find_best_article_urls(response_data, query):
     #turn json into string
     response_str = json.dumps(response_data)
     
-    #creating llm to choose best articles
+    #llm to choose best articles
     template = """
     You are a world class jounalist & researcher and news searcher, you are extremely good at finding the most relevant articles to certain topic;
     {response_str}
     Above is the list of search results for the query {query}.
-    Please choose the best 3 articles from the list, return ONLY an array of the urls, do not include anything else; return ONLY an array of the urls, do not include anything else other than urls;
+    Please choose the latest dated best 4 articles from the list, return ONLY an array of the urls, do not include anything else; return ONLY an array of the urls, do not include anything else other than urls;
     """
     
     prompt_template = PromptTemplate(
@@ -67,26 +68,37 @@ def find_best_article_urls(response_data, query):
 
 #3 get content for each article from urls and make summaries
 
+def extract_content(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        page_content = response.content
+        soup = BeautifulSoup(page_content, 'html.parser')
+        article_text = ' '.join([p.text for p in soup.find_all('p')])
+        return {'page_content': article_text}  # Return as a dictionary
+    else:
+        print(f"Unable to access URL: {url}")
+        return {'page_content': None}
+
+
 def get_content_from_urls(urls):
-    #using unstructuredURLLoader
-    loader = UnstructuredURLLoader(urls=urls)
-    data = loader.load()
-    
+    data = [extract_content(url) for url in urls]
+    # print(data)
     return data
 
 def summarise(data, query):
-    text_splitter = CharacterTextSplitter(separator="\n", chunk_size=2000, chunk_overlap=200, length_function=len)
-    text = text_splitter.split_documents(data)
+    text_splitter = CharacterTextSplitter(separator="\\n", chunk_size=2000, chunk_overlap=200, length_function=len)
+    text = [doc['page_content'] for doc in data if doc['page_content'] is not None]
     
     template = """
-    You are a world class journalist, you are extremely good at summarising and you will try to summarise the text above in order to create a better summary about {query}
+    You are a world class journalist, you are extremely good at summarising text data and you will try to summarise the text given below in order to create a better bullet points summary from the text given below
     Please follow all of the following rules:
-    1/ Make sure the answer is direct and concise, not more than 100 words
-    2/ Make sure the content is not too long, informative with good data
-    3/ The content should address the {query} topic very well
-    4/ The content should be written in a way that is easy to read and understand
-    
-    SUMMARY:
+    1/ Make sure the answer is direct and concise bullet points, not more than 200 words.
+    2/ The content should address the {query} topic strictly from the text below, not generalised one.
+    3/ The content should be not too long, informative with good data(NUMBERS, FIGURES, NAMES, PLACES etc)
+    4/ The content should be written in a way that is easy to read and understand.
+    5/
+    TEXT:
+    {text}
     """
     
     prompt_template = PromptTemplate(
@@ -99,6 +111,9 @@ def summarise(data, query):
         summary = summariser_chain.predict(text=chunk, query=query, articles=query)
         summaries.append(summary)
         
+        if summaries:
+            break
+        
     print(summaries)
     return summaries
 
@@ -106,14 +121,15 @@ def generate_news(summaries, query):
     summaries_str = str(summaries)
     
     template = """
-    {summaries_str}
-    You are a world class jounalist and powerful socially, text above is some context about{query}
+    You are a world class jounalist and powerful socially, the summaries_str below is some context about{query}
     Please follow all of the following rules:
-    1/ The thread needs to be direct and concise, not more than 100 words
-    2/ The thread needs to be not too long, informative with good data
-    3/ The thread needs to address the {query} topic very well
-    5/ The thread needs to be written in a way that is easy to read and understand
-    
+    1/ The bullet points needs to be direct and concise bullet points, not more than 200 words.
+    2/ The bullet points should not too long, informative with good data(NUMBERS, FIGURES, NAMES, PLACES etc).
+    3/ The bullet points to address the {query} topic strictly from the summaries_str below, not generalised one.
+    4/ The bullet points to be written in a way that is easy to read and understand.
+    5/
+    summaries_str:
+    {summaries_str}
     News:
     """
     
@@ -128,28 +144,54 @@ def generate_news(summaries, query):
 
 
 def main():
-    st.set_page_config(page_title="Epic Newzz!", page_icon="🌏", layout="wide")
+    st.set_page_config(page_title="Epic Newzz", page_icon="🌏", layout="wide")
     
-    st.header("Hi👋 I am Newzy from Epic Newzz.. Ask me anything!😁")
+    st.header("Hi👋 I am Newzy from Epic Newzz. Ask me anything!😁")
     query = st.text_input("News Topic")
     
+
+    
     if query:
-        print(query)
-        st.write("Gathering news for:", query)
-        
-        search_results = search(query)
-        urls = find_best_article_urls(search_results, query)
-        data = get_content_from_urls(urls)
-        summaries = summarise(data, query)
-        news = generate_news(summaries, query)
-        
+        with st.spinner("gathering news... 🌏"):
+            search_results = search(query)
         with st.expander("search results"):
             st.info(search_results)
+        with st.spinner("Articles found. Now selecting the best ones... 🧐"):
+            urls = find_best_article_urls(search_results, query)
         with st.expander("links to relevant articles"):
             st.info(urls)
+        with st.spinner("Now fetching content..."):
+            data = get_content_from_urls(urls)
+        with st.spinner("Summarizing it for you... 😇"):
+            summaries = summarise(data, query)
+        with st.spinner("Good things are worth waiting, says my developer... 😇😁"):
+            news = generate_news(summaries, query)
         with st.expander("news"):
             st.info(news)
+        
+        
+
 
 
 if __name__ == '__main__':
     main()
+    
+
+# Footer
+footer = """
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+}
+</style>
+<div class="footer">
+    Developed with ❤️ by Pramod Koujalagi
+</div>
+"""
+st.markdown(footer, unsafe_allow_html=True)

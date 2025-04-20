@@ -32,7 +32,6 @@ Newzy, your AI news companion, is the brain behind Epic Newzz! Armed with state-
 
 
 ## 📸 Image Gallery
-(These images are from the latest version of Newzy, haven't pushed the code yet.)
 
 <p align="center">
   <img src="ss/SS11.png" width="1000">
